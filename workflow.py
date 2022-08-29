@@ -17,4 +17,4 @@ def kfpipeline():
     
     
     # run the ingestion function with the new image and params
-    ingest = funcs['data_fetch'].as_step(outputs=['df
+    ingest = funcs['data_fetch'].as_step(outputs=['df'])
