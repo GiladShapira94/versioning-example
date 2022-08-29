@@ -15,7 +15,6 @@ def init_functions(functions: dict, project=None, secrets=None):
 
 def kfpipeline():
     
-    
-    # run the ingestion function with the new image and params
+# run the ingestion function with the new image and params
     job = funcs['data_fetch'].as_step(outputs=['df'])
-    serving = funcs['serving'].as_step(outputs=['df_serving'])
+    serving = funcs['serving'].deploy_step()
