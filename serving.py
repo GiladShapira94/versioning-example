@@ -1,8 +1,9 @@
 import pandas as pd
 import mlrun
 from mlrun import MLClientCtx
-def data_fetch(context:MLClientCtx,num_rows):
+def data_fetch(num_rows):
     values=[]
+    context=MLClientCtx()
     for i in num_rows:
         values.append(i)
     df = pd.DataFrame(data={"col1":values})
