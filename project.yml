@@ -8,6 +8,10 @@ spec:
     kind: job
     image: mlrun/mlrun
     handler: data_fetch
+    with_repo: true
+  - url: serving.yaml
+    name: serving
+    with_repo: true
   workflows:
   - engine: kfp
     path: workflow.py
