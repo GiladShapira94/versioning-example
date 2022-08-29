@@ -1,0 +1,17 @@
+kind: project
+metadata:
+  name: project-version-example
+spec:
+  functions:
+  - url: data_fetch.py
+    name: data_fetch
+    kind: job
+    image: mlrun/mlrun
+    handler: data_fetch
+  workflows:
+  - engine: kfp
+    path: workflow.py
+    name: workflow
+  artifacts: []
+  source: ''
+  desired_state: online
